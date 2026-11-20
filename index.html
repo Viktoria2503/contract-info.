@@ -1,49 +1,130 @@
+
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Служба по контракту — информационный ресурс</title>
-
-<meta name="description" content="Информация об условиях, документах, выплатах и правовых вопросах военной службы по контракту в России.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Служба по контракту — информационный портал</title>
 <style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101b2d;
+  color: #fff;
+  line-height: 1.6;
+}
+header {
+  padding: 24px 18px;
+  text-align: center;
+  background: #172943;
+  border-bottom: 2px solid #c6a45b;
+}
+h1 { color: #e2c477; }
+main { max-width: 850px; margin: auto; padding: 24px 18px; }
+section {
+  background: #1b2c44;
+  padding: 20px;
+  margin: 18px 0;
+  border-radius: 12px;
+}
+h2 { color: #e2c477; }
+a { color: #f0d58e; }
+.notice {
+  border-left: 4px solid #c6a45b;
+  padding-left: 14px;
+}
+footer {
+  text-align: center;
+  padding: 22px;
+  color: #bdc6d3;
+  font-size: 14px;
+}
+button {
+  background: #c6a45b;
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Служба по контракту</h1>
+  <p>Независимый информационный портал</p>
+  <button onclick="setLanguage('ru')">Русский</button>
+  <button onclick="setLanguage('en')">English</button>
+</header>
 
-*{box-sizing:border-box}
+<main>
+<section>
+  <h2 id="title">Информация о контрактной службе</h2>
+  <p id="intro">Здесь собрана общая справочная информация о правовых условиях, обязанностях и документах, связанных с военной службой по контракту в Российской Федерации.</p>
+</section>
 
-body{margin:0;font-family:Arial,sans-serif;background:#f3f5f7;color:#182334;line-height:1.6}
+<section>
+  <h2 id="termsTitle">Условия и обязанности</h2>
+  <p id="terms">Условия службы, срок контракта, обязанности и порядок его прекращения регулируются законодательством Российской Федерации и условиями конкретного контракта. Перед принятием решения важно внимательно изучить все документы.</p>
+</section>
 
-header{background:#101d31;color:white;padding:22px 5%}
+<section>
+  <h2 id="documentsTitle">Документы и оформление</h2>
+  <p id="documents">Перечень необходимых документов и порядок оформления следует уточнять в уполномоченных государственных органах. Требования могут различаться в зависимости от обстоятельств и статуса заявителя.</p>
+</section>
 
-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+<section>
+  <h2 id="risksTitle">Важная правовая информация</h2>
+  <p id="risks">Военная служба связана с риском для жизни и здоровья, а также с особыми правовыми обязанностями и ограничениями. Необходимо заранее изучить возможные последствия и получить независимую юридическую консультацию.</p>
+</section>
 
-.logo{font-weight:bold;color:#d7b56d;font-size:20px}
+<section class="notice">
+  <h2 id="officialTitle">Официальные источники</h2>
+  <p id="official">Тексты нормативных актов и официальную правовую информацию можно проверить на государственном портале:</p>
+  <a href="https://pravo.gov.ru/" target="_blank" rel="noopener">Официальный интернет-портал правовой информации</a>
+</section>
 
-nav a{color:white;text-decoration:none;margin:5px}
+<section>
+  <p id="disclaimer">Сайт является независимым информационным ресурсом и не представляет государственные органы или военное ведомство. Информация не является юридической консультацией.</p>
+</section>
+</main>
 
-button{padding:9px 14px;background:#d7b56d;border:0;border-radius:5px;cursor:pointer}
+<footer>© 2026 — Информационный портал</footer>
 
-.hero{background:#172a43;color:white;padding:65px 7%}
-
-.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.2}
-
-.hero p{max-width:750px;color:#e0e6ef}
-
-section{padding:45px 7%}
-
-h2{color:#172a43}
-
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-
-.card{background:white;padding:22px;border-radius:10px;border:1px solid #e1e5eb}
-
-.card h3{color:#172a43}
-
-.note{background:#172a43;color:white;padding:24px;border-radius:10px}
-
-footer{background:#101d31;color:white;padding:25p
+<script>
+function setLanguage(lang) {
+  const ru = {
+    title: "Информация о контрактной службе",
+    intro: "Здесь собрана общая справочная информация о правовых условиях, обязанностях и документах, связанных с военной службой по контракту в Российской Федерации.",
+    termsTitle: "Условия и обязанности",
+    terms: "Условия службы, срок контракта, обязанности и порядок его прекращения регулируются законодательством Российской Федерации и условиями конкретного контракта. Перед принятием решения важно внимательно изучить все документы.",
+    documentsTitle: "Документы и оформление",
+    documents: "Перечень необходимых документов и порядок оформления следует уточнять в уполномоченных государственных органах. Требования могут различаться в зависимости от обстоятельств и статуса заявителя.",
+    risksTitle: "Важная правовая информация",
+    risks: "Военная служба связана с риском для жизни и здоровья, а также с особыми правовыми обязанностями и ограничениями. Необходимо заранее изучить возможные последствия и получить независимую юридическую консультацию.",
+    officialTitle: "Официальные источники",
+    official: "Тексты нормативных актов и официальную правовую информацию можно проверить на государственном портале:",
+    disclaimer: "Сайт является независимым информационным ресурсом и не представляет государственные органы или военное ведомство. Информация не является юридической консультацией."
+  };
+  const en = {
+    title: "Information about Contract Service",
+    intro: "This website provides general reference information about legal conditions, duties and documents related to military contract service in the Russian Federation.",
+    termsTitle: "Terms and Obligations",
+    terms: "Service conditions, contract duration, duties and termination procedures are governed by Russian law and the specific contract. Carefully review all documents before making a decision.",
+    documentsTitle: "Documents and Procedures",
+    documents: "The required documents and application procedure should be confirmed with the competent public authorities. Requirements may vary depending on individual circumstances and status.",
+    risksTitle: "Important Legal Information",
+    risks: "Military service involves risks to life and health, as well as specific legal duties and restrictions. Review possible consequences and seek independent legal advice in advance.",
+    officialTitle: "Official Sources",
+    official: "Legislation and official legal information can be checked at the government portal:",
+    disclaimer: "This is an independent information resource and is not affiliated with government or military authorities. The content is not legal advice."
+  };
+  const data = lang === "en" ? en : ru;
+  Object.keys(data).forEach(id => {
+    document.getElementById(id).textContent = data[id];
+  });
+}
+</script>
+</body>
+</html>
